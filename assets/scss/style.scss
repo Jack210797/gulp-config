@@ -1,0 +1,23 @@
+* {
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+
+  color: inherit;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  position: relative;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  display: flex;
+}
