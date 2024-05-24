@@ -39,10 +39,10 @@ function scss() {
 
 function scssDev() {
   const pluginsForDev = [...PLUGINS]
-  pluginsForDev.splice(1, 0)
+  pluginsForDev.splice(0, 1)
   return src(PATH.scssRoot, { sourcemaps: true })
   .pipe(sass().on('error', sass.logError))
-  .pipe(postcss(PLUGINS))
+  .pipe(postcss(pluginsForDev))
   .pipe(dest(PATH.cssFolder, { sourcemaps: true }))
   .pipe(browserSync.stream())
 }
